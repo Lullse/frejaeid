@@ -1,0 +1,97 @@
+/* Footer-stilar */
+footer {
+    position: fixed; /* Fixerar foten längst ner på sidan */
+    padding: 1rem 0; /* Padding på toppen och botten */
+    bottom: 0; /* Fästa vid botten av fönstret */
+    height: 12%; /* Höjd på foten */
+    left: 0; /* Justera fotens position till vänster */
+    width: 100%; /* Full bredd */
+    background-color: #fff; /* Vit bakgrundsfärg */
+}
+
+footer nav ul {
+    display: flex; /* Använder flexbox för att arrangera listan horisontellt */
+    justify-content: space-around; /* Jämnt utrymme mellan listobjekten */
+    list-style-type: none; /* Ingen punktlista */
+    padding: 0; /* Ingen padding */
+}
+
+footer nav ul li {
+    padding: 1rem; /* Padding runt varje listobjekt */
+}
+
+footer nav ul li a {
+    color: #4e4e4e; /* Mörkgrå textfärg */
+    text-decoration: none; /* Ingen understrykning på länkar */
+    display: flex; /* Använder flexbox för att arrangera innehållet */
+    flex-direction: column; /* Länkar på rad */
+    align-items: center; /* Centrera innehållet */
+}
+
+footer nav ul li a:hover {
+    color: #ccc; /* Ljusgrå textfärg vid hover */
+}
+
+footer nav ul li a i {
+    font-size: 1.5rem; /* Större storlek för ikoner */
+}
+
+footer nav ul li a span {
+    font-size: .8rem; /* Mindre storlek för text under ikoner */
+}
+
+/* Allmänna stilar för body */
+body {
+    margin: 0; /* Ingen marginal */
+    padding: 0; /* Ingen padding */
+    display: flex; /* Använder flexbox */
+    justify-content: center; /* Centrera innehållet horisontellt */
+    align-items: center; /* Centrera innehållet vertikalt */
+    height: 100vh; /* Full höjd på visningsfönstret */
+    background-color: #f5f5f5; /* Ljusgrå bakgrundsfärg */
+}
+
+/* Stil för kreditkort */
+.credits-card {
+    border: 1px solid #7289da; /* Ljusblå kantlinje */
+    padding: 90px; /* Padding inuti kreditkortet */
+    width: 325px; /* Fast bredd på kreditkortet */
+    text-align: center; /* Centrera texten */
+    background-image: url(../images/id.png); /* Bakgrundsbild */
+    background-size: cover; /* Täck hela området */
+    background-position: center; /* Centrera bakgrundsbilden */
+    border-radius: 15px; /* Rundade hörn */
+    position: relative; /* Relativ positionering */
+    margin-top: -500px; /* Negativ marginal för justering */
+}
+
+/* Sektion för krediter */
+.credits-section {
+    position: relative; /* Relativ positionering för överlappning */
+    z-index: 1; /* För att placera denna sektion ovanför andra element */
+    color: #fff; /* Vit textfärg */
+}
+
+.credits-section h2 {
+    margin-bottom: 20px; /* Marginal under rubriken */
+    margin-top: 100px; /* Marginal ovanför rubriken */
+}
+
+/* Länkar in kreditkortet */
+.credits-card a {
+    text-decoration: none; /* Ingen understrykning */
+    color: inherit; /* Ärva färgen från föräldraelementet */
+}
+
+/* Innehåll för ansikte */
+.faceContent {
+    position: relative; /* Relativ positionering */
+    border-radius: 50px; /* Rundade hörn */
+}
+
+/* Bildanimation */
+.spinImg {
+    position: absolute; /* Absolut positionering */
+    left: 42%; /* Centrera bild horisontellt */
+    transform: translate(-50%, -50%); /* Justera bilden till mitten */
+}

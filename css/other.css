@@ -1,0 +1,107 @@
+/* Allmänna inställningar för knappar och inmatning */
+[class~=btn1], [class~=formContent] input {
+    padding-left: 1.25pc;
+    font-family: "Montserrat", sans-serif; /* Teckensnitt för knappar och formulär */
+    font-weight: 700; /* Fett typsnitt */
+    margin-bottom: 10px; /* Marginal under knapp och inmatning */
+}
+
+[class~=content2] {
+    position: absolute;
+}
+
+.inputFormContainer,
+[class~=content2] {
+    height: 100vh; /* Full höjd av visningsfönstret */
+}
+
+.inputFormContainer,
+#logout,
+[class~=content2],
+[class~=formContent] input {
+    width: 100%; /* Full bredd för dessa element */
+}
+
+/* Bakgrund för hela sidan */
+body,
+[class~=content2] {
+    background: linear-gradient(#3b3e98, #1681d3);
+}
+
+/* Flexbox inställningar för olika element */
+[class~=formContent],
+[class~=updateAgeContent] button,
+[class~=updateAgeContent],
+.socialContent {
+    display: flex;
+    justify-content: center; /* Centrerar innehållet horisontellt */
+    align-items: center; /* Centrerar innehållet vertikalt */
+}
+
+[class~=formContent] {
+    flex-direction: column; /* Lägger innehåll i kolumner */
+    width: 90%; /* Bredd på formulärelement */
+    height: 5.208333333in; /* Specifik höjd */
+    margin-top: -70px; /* Negativ marginal för att justera position */
+}
+
+/* Specifika inställningar för inmatningsfält */
+[class~=formContent] input,
+[class~=btn1] {
+    max-width: 390px; /* Maximal bredd för inmatningsfält */
+    height: .520833333in; /* Specifik höjd för inmatningsfält */
+}
+
+/* Inställningar för knappar */
+[class~=updateAgeContent] button,
+[class~=formContent] input,
+[class~=btn1] {
+    border-radius: .104166667in; /* Rundade hörn */
+    margin-top: .104166667in; /* Marginal ovanför */
+    cursor: pointer; /* Visar pekaren vid hover */
+}
+
+[class~=updateAgeContent],
+[class~=btn1],
+.socialContent {
+    width: 100%; /* Full bredd för dessa element */
+}
+
+[class~=updateAgeContent],
+[class~=btn1] {
+    height: 37.5pt; /* Specifik höjd för knappar */
+}
+
+/* Bakgrund och färg för knappar och innehåll */
+[class~=formContent] input,
+[class~=btn1],
+[class~=updateAgeContent] button {
+    background-color: white; /* Vit bakgrund */
+}
+
+[class~=updateAgeContent] button {
+    font-weight: 800; /* Extra fett typsnitt */
+    color: black; /* Textfärg för knappar */
+    font-size: 15pt; /* Textstorlek för knappar */
+    margin-left: 1.25pc; /* Marginal till vänster */
+    margin-right: 1.25pc; /* Marginal till höger */
+    width: 22.5pt; /* Specifik bredd för knappar */
+    height: 1.875pc; /* Specifik höjd för knappar */
+}
+
+/* Färger för olika innehåll och positionering */
+[class~=updateAgeContent],
+.socialContent,
+#logout {
+    color: white; /* Vit textfärg */
+}
+
+.socialContent {
+    font-weight: 700; /* Fett typsnitt för socialt innehåll */
+    position: absolute;
+    bottom: .520833333in; /* Justering av position */
+}
+
+#logout {
+    background-color: #3b3e98; /* Bakgrundsfärg för logout */
+}
