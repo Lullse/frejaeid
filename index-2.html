@@ -10,53 +10,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/other.css">
+    <link rel="manifest" href="%25freja.lol%25/manifest.json">
     <link rel="apple-touch-icon" type="image/jpg" sizes="512x512" href="images/FrejaIcon.png">
     <link rel="apple-touch-startup-image" href="images/FrejaIcon.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/other.css">
-    <link rel="manifest" href="%25freja.lol%25/manifest.json">
-
     <title>Freja</title>
-
     <style>
-        body, html {
+        body,
+        html {
             overflow: hidden !important;
-            font-family: 'Montserrat', sans-serif; /* Lägg till font-familj */
-        }
-
-        .content {
-            padding: 10px; /* Lägg till lite padding */
-        }
-
-        .inputContainer {
-            margin-top: 20px;
-        }
-
-        .inputContainer label {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .inputContainer input,
-        .inputContainer select {
-            padding: 10px;
-            width: 100%; /* Sätt bredd till 100% */
-            margin-bottom: 10px;
-            box-sizing: border-box; /* Inkludera padding i bredd */
-        }
-
-        /* Responsiv design */
-        @media (max-width: 768px) {
-            .textContentPanel {
-                flex-direction: column; /* Gör text elementen en kolumn på små skärmar */
-                align-items: flex-start; /* Justera elementen till vänster */
-            }
-            .panelContent {
-                padding: 10px; /* Lägg till padding på panelen */
-            }
         }
     </style>
 
@@ -67,7 +33,6 @@
     <audio src="audio/glitter_04.mp3" id="f4"></audio>
     <audio src="audio/glitter_05.mp3" id="f5"></audio>
     <audio src="audio/slide.mp3" id="s6" volume="2.8"></audio>
-
 </head>
 
 <body style="-webkit-user-select:none">
@@ -135,25 +100,6 @@
                 </div>
             </div>
         </div>
-        
-        <!-- Ny sektion för att ange tid, datum och giltighet -->
-        <div class="inputContainer" id="inputContainer">
-            <label for="datum">Välj datum:</label>
-            <input type="date" id="datum" name="datum" required>
-
-            <label for="tid">Välj tid:</label>
-            <input type="time" id="tid" name="tid" required>
-
-            <label for="giltigt">Giltig i:</label>
-            <select id="giltigt" name="giltigt" required>
-                <option value="">Välj giltighet</option>
-                <option value="1">1 dag</option>
-                <option value="7">1 vecka</option>
-                <option value="30">1 månad</option>
-                <option value="365">1 år</option>
-            </select>
-        </div>
-        
     </div>
 
     <div class="green-image-container">
@@ -161,22 +107,6 @@
     </div>
 
     <script>
-        // Hämta sparade värden från localStorage
-        document.addEventListener("DOMContentLoaded", function() {
-            const name = localStorage.getItem('userName');
-            const lastname = localStorage.getItem('userLastname');
-            const birthcode = localStorage.getItem('userBirthcode');
-            const age = localStorage.getItem('userAge');
-            const personnummer = localStorage.getItem('userPersonnummer');
-
-            // Fyll i motsvarande element med sparad information
-            document.getElementById('updateFornamn').textContent = name || 'Ingen namn sparades';
-            document.getElementById('updateEfternamn').textContent = lastname || 'Ingen efternamn sparades';
-            document.getElementById('updateOlder').textContent = age || 'Ingen ålder sparades';
-            document.getElementById('updateBirthcode').textContent = birthcode || 'Ingen personnummer sparades';
-            document.getElementById('updatePersonnummer').textContent = personnummer || 'Inget övrigt personnummer sparades';
-        });
-
         window.addEventListener("load", function () {
             function adjustTouchMove() {
                 if (window.innerHeight >= 844) {
@@ -192,23 +122,8 @@
 
             adjustTouchMove();
             window.addEventListener("resize", adjustTouchMove);
-
-            // Justera canvas storlek för mobilvisning
-            const canvas = document.getElementById('canvas');
-            const particleCanvas = document.getElementById('particleCanvas');
-
-            function resizeCanvas() {
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight;
-                particleCanvas.width = window.innerWidth;
-                particleCanvas.height = window.innerHeight;
-            }
-            resizeCanvas();
-            window.addEventListener('resize', resizeCanvas);
         });
     </script>
-
-    <!-- JavaScript files -->
     <script src="scripts/particles.html"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/particlesClicked.js"></script>
