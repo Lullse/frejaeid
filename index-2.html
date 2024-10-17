@@ -24,18 +24,39 @@
     <style>
         body, html {
             overflow: hidden !important;
+            font-family: 'Montserrat', sans-serif; /* Lägg till font-familj */
         }
+
+        .content {
+            padding: 10px; /* Lägg till lite padding */
+        }
+
         .inputContainer {
             margin-top: 20px;
         }
+
         .inputContainer label {
             display: block;
             margin-bottom: 5px;
         }
-        .inputContainer input, .inputContainer select {
+
+        .inputContainer input,
+        .inputContainer select {
             padding: 10px;
-            width: 100%;
+            width: 100%; /* Sätt bredd till 100% */
             margin-bottom: 10px;
+            box-sizing: border-box; /* Inkludera padding i bredd */
+        }
+
+        /* Responsiv design */
+        @media (max-width: 768px) {
+            .textContentPanel {
+                flex-direction: column; /* Gör text elementen en kolumn på små skärmar */
+                align-items: flex-start; /* Justera elementen till vänster */
+            }
+            .panelContent {
+                padding: 10px; /* Lägg till padding på panelen */
+            }
         }
     </style>
 
@@ -46,6 +67,7 @@
     <audio src="audio/glitter_04.mp3" id="f4"></audio>
     <audio src="audio/glitter_05.mp3" id="f5"></audio>
     <audio src="audio/slide.mp3" id="s6" volume="2.8"></audio>
+
 </head>
 
 <body style="-webkit-user-select:none">
@@ -131,7 +153,7 @@
                 <option value="365">1 år</option>
             </select>
         </div>
-
+        
     </div>
 
     <div class="green-image-container">
@@ -170,6 +192,19 @@
 
             adjustTouchMove();
             window.addEventListener("resize", adjustTouchMove);
+
+            // Justera canvas storlek för mobilvisning
+            const canvas = document.getElementById('canvas');
+            const particleCanvas = document.getElementById('particleCanvas');
+
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+                particleCanvas.width = window.innerWidth;
+                particleCanvas.height = window.innerHeight;
+            }
+            resizeCanvas();
+            window.addEventListener('resize', resizeCanvas);
         });
     </script>
 
